@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    build: . # 현재 폴더의 Dockerfile 사용
+    # command: python manage.py runserver 0.0.0.0:8000
+    command: gunicorn django_tutorial.wsgi:application --bind 0.0.0.0:8000
+    volumes: # 현재 폴더를 /usr/src/app와 연결함.
+      - static_volume:/usr/src/app/_static
+      - ./:/usr/src/app/
+    ports:
+      - 8000
+
+volumes:
+  static_volume:

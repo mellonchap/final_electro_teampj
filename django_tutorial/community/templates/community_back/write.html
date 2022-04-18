@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}장고 첫프로젝트{% endblock %}
+
+    {% block content %}
+    <h1>장고테스트</h1>
+    <p>헬로 장고</p>    
+    <form action="" method="post">
+        <table>
+            {% csrf_token %}
+            {{form}}
+        </table>
+        <button type="submit">확인</button>
+    </form>
+    {% endblock %}

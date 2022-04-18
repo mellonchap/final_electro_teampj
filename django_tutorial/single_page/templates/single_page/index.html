@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}장고 첫프로젝트{% endblock %}
+
+{% block part_style %}
+<style>
+    p.main_img {
+        width: 60vw;
+        margin: 10px auto;
+    }
+
+    .main_img img {
+        width: 100%;
+    }
+</style>
+<link rel="stylesheet" href="{% static 'css/list.css' %}">
+
+{% endblock %}
+
+
+{% block content %}
+<div class="article_box mb-4">
+    <table class="table table-bodered table-condensed table-striped">
+        <tr class="table-primary">
+            <th>제목</th>
+            <th>이름</th>
+            <th>작성 날짜</th>
+        </tr>
+        {%for i in latest_article_list%}
+        <tr>
+            <td><a href="community/view_detail/{{i.id}}">{{i.title}}</a></td>
+            <td>{{ i.name }}</td>
+            <td>{{i.cdate | date:"Y년 M d일 D"}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    <p>
+        <a class="border p-2" href="community/list">전체목록 보기</a>&nbsp;&nbsp;&nbsp;
+        <a class="border p-2" href="community/write">메모하기</a>
+    </p>
+</div>
+
+<p class="main_img">
+    <img src="{% static '/imgs/tiger.jpg' %}" alt="호랑이 이미지">
+</p>
+{% endblock content %}
+

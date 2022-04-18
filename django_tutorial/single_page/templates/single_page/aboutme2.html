@@ -1,0 +1,115 @@
+
+{% load static %}
+{% block title %}장윤 소개{% endblock %}
+
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/chap8_flex.css'%}">
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <h1><a href="{% url 'single_page:aboutMe' %}">포트폴리오</a></h1>
+            <ul id="gnb">
+                <li><a href="./member/chap7_online_profile.html">디지털 명함</a></li>
+                <!-- <li><a href="#">전공</a></li> -->
+                <li><a href="{% url 'single_page:project' %}">프로젝트</a></li>
+                <!-- <li><a href="#">자격증</a></li> -->
+                <li><a href="#">외 활동</a></li>
+            </ul>
+            <ul class="util">
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Sitemap</a></li>
+            </ul>
+        </div>
+    </header>
+    <figure>
+        <video src="{%static 'imgs/Button - 99350.mp4'%}" autoplay muted loop></video>
+
+        <div class="inner">
+            <h1>JANG YUN</h1>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.
+            </p>
+            <a href="./member/viewDetail.html">view detail</a>
+        </div>
+    </figure>
+    <section>
+        <div class="inner">
+            <h1>RECENT NEWS</h1>
+            <div class="wrap">
+                <article>
+                    <div class="pic">
+                        <img id="ttt" src="{%static 'imgs/sumnail.png'%}" alt="1번째 콘텐츠 이미지">
+                    </div>
+                    <h2><a href="./project.html">게임제작 프로젝트</a></h2>
+                    <p>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text.
+                    </p>
+                </article>
+                <article>
+                    <div class="pic">
+                        <img src="{%static 'imgs/wildlife.png'%}" alt="1번째 콘텐츠 이미지">
+                    </div>
+                    <h2><a href="#">Lorem ipsum dolor sit.</a></h2>
+                    <p>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text.
+                    </p>
+                </article>
+                <article>
+                    <div class="pic">
+                        <img src="{%static 'imgs/wildlife.png'%}" alt="1번째 콘텐츠 이미지">
+                    </div>
+                    <h2><a href="#">Lorem ipsum dolor sit.</a></h2>
+                    <p>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text.
+                    </p>
+                </article>
+                <article>
+                    <div class="pic">
+                        <img src="{%static 'imgs/wildlife.png'%}" alt="1번째 콘텐츠 이미지">
+                    </div>
+                    <h2><a href="#">Lorem ipsum dolor sit.</a></h2>
+                    <p>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="inner">
+            <div class="upper">
+                <h1>포트폴리오</h1>
+                <ul>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="lower">
+                <address>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>
+                    Tel : 010-000-0000 C.P : 010-0000-0000
+                </address>
+                <p>
+                    2020 dasdf; copydfajdfkajdkfd.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}장고 첫프로젝트{% endblock %}
+
+{% block part_style %}
+<title>Document</title>
+<style>
+    .article_box {
+        width: 500px;
+        background-color: rgb(220, 248, 220);
+    }
+
+    p>span {
+        padding: 10px;
+        text-align: center;
+    }
+
+    p>span:first-of-type {
+        width: 150px;
+        display: inline-block;
+    }
+
+    ul {
+        border-top: 2px solid black;
+    }
+
+    ul>li>span {
+        margin: 5px;
+    }
+
+    ul>li>span:first-of-type {
+        width: 150px;
+        display: inline-block;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="article_box">
+    <p>
+        <span>이름</span>
+        <span>제목</span>
+        <span>작성 날짜</span>
+    </p>
+    <ul>
+        {%for i in article_list%}
+        <li>
+            <a href="/community/view_detail/{{i.id}}"><span>{{i.name}}</span></a>
+            <span> {{i.title}}</span>
+            <span> {{i.cdate |date:"Y년 M d일 D"}} </span>
+        </li>
+        {%endfor%}
+    </ul>
+</div>
+{% endblock %}
+
+
+<!-- name
+title
+contents
+url
+email
+cdate -->

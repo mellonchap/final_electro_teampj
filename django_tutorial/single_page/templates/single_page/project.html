@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/project.css'%}">
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <h1><a href="{% url 'single_page:aboutMe' %}">포트폴리오</a></h1>
+            <ul id="gnb">
+                <li><a href="./member/chap7_online_profile.html">디지털 명함</a></li>
+                <!-- <li><a href="#">전공</a></li> -->
+                <li><a href="{% url 'single_page:project' %}">프로젝트</a></li>
+                <!-- <li><a href="#">자격증</a></li> -->
+                <li><a href="#">외 활동</a></li>
+            </ul>
+            <ul class="util">
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Sitemap</a></li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <article>
+            <div style="cursor: pointer;">
+                <a href="{% url 'single_page:port' %}">
+                    <img src="{%static 'imgs/asdf.PNG'%}" alt="img/p1.jpg">
+                    <h2>게임제작 프로젝트</h2>
+                </a>                
+                <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p> -->
+            </div>            
+        </article>
+        <article>
+            <div style="cursor: pointer;">                
+                <a href="{% url 'electro_project:electro2' %}">
+                    <img src="{% static '/imgs/homebg.jpg' %}" alt="img/p1.jpg">
+                    <h2>전기차 프로젝트</h2>
+                </a>                
+                <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p> -->
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <div class="inner">
+            <div class="upper">
+                <h1>포트폴리오</h1>
+                <ul>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="lower">
+                <address>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>
+                    Tel : 010-000-0000 C.P : 010-0000-0000
+                </address>
+                <p>
+                    2020 dasdf; copydfajdfkajdkfd.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

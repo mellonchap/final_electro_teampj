@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}{{article_detail.id}}번글 세부내용{% endblock %}
+{% block content %}
+    <table>
+        <tr>
+            <th>no</th>
+            <td>{{article_detail.id}}</td>
+        </tr>
+        <tr>
+            <th>제목</th>
+            <td>{{article_detail.title}}</td>
+        </tr>
+        <tr>
+            <th>작성자</th>
+            <td>{{article_detail.name}}</td>
+        </tr>
+        <tr>
+            <th>내용</th>
+            <td>{{article_detail.contents}}</td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>{{article_detail.url}}</td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>{{article_detail.email}}</td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>{{article_detail.cdate}}</td>
+        </tr>
+    </table>   
+    {% endblock %} 
+
+
+<!-- name
+id(또는 pk)
+name
+title
+contents
+url
+email
+cdate -->
